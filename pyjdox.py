@@ -15,13 +15,27 @@ import os
 import json
 import pydoc
 import inspect
+import sys
 from lib import pyjdox
 
+
+
+def get_doc(pyjdoxobj, filepath):
+    """
+    Get code documentation
+    """
+    mod = pydoc.importfile(filepath)
+    jdata = pyjdoxobj.describe(mod, filepath)
+    return jdata
+
 def main():
-    """ Take user input and run get python doc as JSON """
+    """
+    Take user input and run get python doc as JSON
+    """
     # Get user Input
     parser = argparse.ArgumentParser(description='pyjdox parser')
     parser.add_argument('-f', '--file', help='Pass python file')
+    parser.add_argument('-d', '--dir', help='Path to library source tree')
     args = parser.parse_args()
     # Create object for pyjdox
     pyjdoxobj = pyjdox.pyjdox()
@@ -33,17 +47,46 @@ def main():
     # Create output directory
     if not os.path.exists(output_dir) or not os.path.isdir(output_dir):
         os.makedirs(output_dir)
+
     # Run pyjdox on user input
     if args.file:
         if args.file.startswith('~'):
             args.file = os.path.expanduser(args.file)
         if os.path.isfile(args.file):
-            mod = pydoc.importfile(args.file)
-            jdata = pyjdoxobj.describe(mod, args.file)
+            jdata = get_doc(pyjdoxobj, args.file)
             fname = '%s.json' % os.path.basename(args.file)
             fname = os.path.join(output_dir, fname)
             with open(fname, 'w') as jfile:
                 json.dump(jdata, jfile)
+
+    # Run pyjdox on source tree
+    if args.dir:
+        filelist = []
+        output_dir = os.path.join(output_dir, os.path.basename(args.dir))
+        if args.dir.startswith('~'):
+            args.dir = os.path.expanduser(args.dir)
+        try:
+            if not os.path.exists(output_dir) or not os.path.isdir(output_dir):
+                os.makedirs(output_dir)
+            for folder, subs, files in os.walk(args.dir):
+                for filename in files:
+                    if filename.endswith('.py'):
+                        filelist.append(os.path.join(folder, filename))
+
+            for fname in filelist:
+                print fname
+                jdata = get_doc(pyjdoxobj, fname)
+                ofloc = os.path.dirname((os.path.relpath(fname, args.dir)))
+                ofloc = os.path.join(output_dir, ofloc)
+                if not os.path.exists(ofloc) or not os.path.isdir(ofloc):
+                    os.makedirs(ofloc)
+                ofname = '%s.json' % os.path.basename(fname)
+                ofname = os.path.join(ofloc, ofname)
+                with open(ofname, 'w') as jfile:
+                    json.dump(jdata, jfile)
+        except Exception, e:
+            print e.msg
+            sys.exit(1)
 
 if __name__ == '__main__':
     main()
