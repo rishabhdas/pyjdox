@@ -16,6 +16,7 @@ import sys
 import json
 import pydoc
 
+
 class pyjdox:
     """ Contains functions to document python code and return JSON """
 
@@ -58,7 +59,9 @@ class pyjdox:
     def describe(self, module, modloc):
         """ Get class, corresponding methods and function details of a given
         module object """
-        json_doc = module_doc = cdict = mdict = {}
+        json_doc = {}
+        cdict = mdict = {}
+        module_doc = {}
         for name in dir(module):
             obj = getattr(module, name)
             if inspect.isclass(obj):
@@ -69,11 +72,23 @@ class pyjdox:
                 json_doc.update(mdict)
         for key in json_doc.keys():
             json_doc[key]['loc'] = modloc
-        for key in json_doc.keys():
-            napikey = '%s.%s' % (module.__name__, key)
-            namespace = napikey.rsplit('.', 1)[0]
-            module_doc[napikey] = json_doc[key]
-            module_doc[napikey]['namespace'] = namespace
+            if json_doc[key]['type'] == 'Function':
+                napikey = '%s.%s' % (module.__name__, key)
+                namespace = napikey.rsplit('.', 1)[0]
+                module_doc[napikey] = json_doc[key]
+                module_doc[napikey]['namespace'] = namespace
+            else:
+                napikey = '%s' % (key)
+                class_name, function_name = napikey.split('.')
+                class_full_name = '%s.%s' % (module.__name__, class_name)
+
+                if class_full_name not in module_doc:
+                    module_doc.update({class_full_name: {"namespace": module.__name__,
+                                                         "loc": modloc,
+                                                         "type": "Class",
+                                                         "methods": [{function_name: json_doc[key]}]}})
+                else:
+                    module_doc[class_full_name]["methods"].append(
+                        {function_name: json_doc[key]})
             json_doc.pop(key)
         return module_doc
-
