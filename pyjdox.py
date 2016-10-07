@@ -19,7 +19,6 @@ import sys
 from lib import pyjdox
 
 
-
 def get_doc(pyjdoxobj, filepath):
     """
     Get code documentation
@@ -27,6 +26,7 @@ def get_doc(pyjdoxobj, filepath):
     mod = pydoc.importfile(filepath)
     jdata = pyjdoxobj.describe(mod, filepath)
     return jdata
+
 
 def main():
     """
@@ -58,6 +58,8 @@ def main():
             fname = os.path.join(output_dir, fname)
             with open(fname, 'w') as jfile:
                 json.dump(jdata, jfile)
+            print("Output has been created successfully")
+            print("Path: %s" % (fname))
 
     # Run pyjdox on source tree
     if args.dir:
@@ -84,8 +86,10 @@ def main():
                 ofname = os.path.join(ofloc, ofname)
                 with open(ofname, 'w') as jfile:
                     json.dump(jdata, jfile)
-        except Exception, e:
-            print e.msg
+                print("Output has been created successfully")
+                print("Path: %s" % (output_dir))
+        except Exception as e:
+            print e.message
             sys.exit(1)
 
 if __name__ == '__main__':

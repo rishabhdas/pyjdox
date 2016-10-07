@@ -1,1 +1,1205 @@
-{"pydoc.safeimport": {"doc": "Import a module; handle errors; return None if the module isn't found.\n\n    If the module *is* found but an exception occurs, it's wrapped in an\n    ErrorDuringImport exception and reraised.  Unlike __import__, if a\n    package path is specified, the module at the end of the path is returned,\n    not the package at the beginning.  If the optional 'forceload' argument\n    is 1, we reload the module from disk (unless it's a dynamic extension).", "args": ["path", "forceload", "cache"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.TextDoc": {"loc": "sample-input/pydoc.py", "namespace": "pydoc", "methods": [{"indent": {"doc": "Indent text by prepending a given prefix to each line.", "args": ["text", "prefix"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"bold": {"doc": "Format a string in bold by overstriking.", "args": ["text"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"section": {"doc": "Format a section with a given heading.", "args": ["title", "contents"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"docdata": {"doc": "Produce text documentation for a data descriptor.", "args": ["object", "name", "mod", "cl"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"docclass": {"doc": "Produce text documentation for a given class object.", "args": ["object", "name", "mod"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"formattree": {"doc": "Render in text a class tree as returned by inspect.getclasstree().", "args": ["tree", "modname", "parent", "prefix"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"docroutine": {"doc": "Produce text documentation for a function or method object.", "args": ["object", "name", "mod", "cl"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"docproperty": {"doc": "Produce text documentation for a property.", "args": ["object", "name", "mod", "cl"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"repr": {"doc": "", "args": ["x"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"formatvalue": {"doc": "Format an argument default value as text.", "args": ["object"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"docmodule": {"doc": "Produce text documentation for a given module object.", "args": ["object", "name", "mod"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"docother": {"doc": "Produce text documentation for a data object.", "args": ["object", "name", "mod", "parent", "maxlen", "doc"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"_docdescriptor": {"doc": "", "args": ["name", "value", "mod"], "type": "Method", "loc": "sample-input/pydoc.py"}}], "type": "Class"}, "pydoc.rstrip": {"doc": "rstrip(s [,chars]) -> string\n\n    Return a copy of the string s with trailing whitespace removed.\n    If chars is given and not None, remove characters in chars instead.\n\n    ", "args": ["s", "chars"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.find": {"doc": "find(s, sub [,start [,end]]) -> in\n\n    Return the lowest index in s where substring sub is found,\n    such that sub is contained within s[start,end].  Optional\n    arguments start and end are interpreted as in slice notation.\n\n    Return -1 on failure.\n\n    ", "args": ["s"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.HTMLDoc": {"loc": "sample-input/pydoc.py", "namespace": "pydoc", "methods": [{"modpkglink": {"doc": "Make a link for a module or package to display in an index.", "args": ["data"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"namelink": {"doc": "Make a link for an identifier, given name-to-URL mappings.", "args": ["name"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"formatvalue": {"doc": "Format an argument default value as text.", "args": ["object"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"grey": {"doc": "", "args": ["text"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"bigsection": {"doc": "Format a section with a big heading.", "args": ["title"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"escape": {"doc": "", "args": ["text"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"modulelink": {"doc": "Make a link for a module.", "args": ["object"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"section": {"doc": "Format a section with a heading.", "args": ["title", "fgcol", "bgcol", "contents", "width", "prelude", "marginalia", "gap"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"repr": {"doc": "", "args": ["object"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"index": {"doc": "Generate an HTML index for a directory of modules.", "args": ["dir", "shadowed"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"preformat": {"doc": "Format literal preformatted text.", "args": ["text"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"docproperty": {"doc": "Produce html documentation for a property.", "args": ["object", "name", "mod", "cl"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"formattree": {"doc": "Produce HTML for a class tree as given by inspect.getclasstree().", "args": ["tree", "modname", "parent"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"docmodule": {"doc": "Produce HTML documentation for a module object.", "args": ["object", "name", "mod"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"docclass": {"doc": "Produce HTML documentation for a class object.", "args": ["object", "name", "mod", "funcs", "classes"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"docroutine": {"doc": "Produce HTML documentation for a function or method object.", "args": ["object", "name", "mod", "funcs", "classes", "methods", "cl"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"docother": {"doc": "Produce HTML documentation for a data object.", "args": ["object", "name", "mod"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"multicolumn": {"doc": "Format a list of items into a multi-column list.", "args": ["list", "format", "cols"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"heading": {"doc": "Format a page heading.", "args": ["title", "fgcol", "bgcol", "extras"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"docdata": {"doc": "Produce html documentation for a data descriptor.", "args": ["object", "name", "mod", "cl"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"markup": {"doc": "Mark up some plain text, given a context of symbols to look for.\n        Each context dictionary maps object names to anchor names.", "args": ["text", "escape", "funcs", "classes", "methods"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"_docdescriptor": {"doc": "", "args": ["name", "value", "mod"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"classlink": {"doc": "Make a link for a class.", "args": ["object", "modname"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"page": {"doc": "Format an HTML page.", "args": ["title", "contents"], "type": "Method", "loc": "sample-input/pydoc.py"}}], "type": "Class"}, "pydoc.render_doc": {"doc": "Render text documentation, given an object or a path to an object.", "args": ["thing", "title", "forceload"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.TextRepr": {"loc": "sample-input/pydoc.py", "namespace": "pydoc", "methods": [{"repr_instance": {"doc": "", "args": ["x", "level"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"__init__": {"doc": "", "args": [], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"repr1": {"doc": "", "args": ["x", "level"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"repr_string": {"doc": "", "args": ["x", "level"], "type": "Method", "loc": "sample-input/pydoc.py"}}], "type": "Class"}, "pydoc.describe": {"doc": "Produce a short description of the given thing.", "args": ["thing"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.writedoc": {"doc": "Write HTML documentation to a file in the current directory.", "args": ["thing", "forceload"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.pipepager": {"doc": "Page through text by feeding it to another program.", "args": ["text", "cmd"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.resolve": {"doc": "Given an object or a path to an object, get the object and its name.", "args": ["thing", "forceload"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.HTMLRepr": {"loc": "sample-input/pydoc.py", "namespace": "pydoc", "methods": [{"repr_instance": {"doc": "", "args": ["x", "level"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"repr": {"doc": "", "args": ["object"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"repr_string": {"doc": "", "args": ["x", "level"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"__init__": {"doc": "", "args": [], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"repr1": {"doc": "", "args": ["x", "level"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"escape": {"doc": "", "args": ["text"], "type": "Method", "loc": "sample-input/pydoc.py"}}], "type": "Class"}, "pydoc.getpager": {"doc": "Decide what method to use for paging through text.", "args": [], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.writedocs": {"doc": "Write out HTML documentation for all modules in a directory tree.", "args": ["dir", "pkgpath", "done"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.synopsis": {"doc": "Get the one-line summary out of a module file.", "args": ["filename", "cache"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc._encode": {"doc": "", "args": ["text", "encoding"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.expandtabs": {"doc": "expandtabs(s [,tabsize]) -> string\n\n    Return a copy of the string s with all tab characters replaced\n    by the appropriate number of spaces, depending on the current\n    column, and the tabsize (default 8).\n\n    ", "args": ["s", "tabsize"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.lower": {"doc": "lower(s) -> string\n\n    Return a copy of the string s converted to lowercase.\n\n    ", "args": ["s"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.classname": {"doc": "Get a class name and qualify it with a module name if necessary.", "args": ["object", "modname"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.importfile": {"doc": "Import a Python source file or compiled file given its path.", "args": ["path"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.getdoc": {"doc": "Get the doc string or comments for an object.", "args": ["object"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.tempfilepager": {"doc": "Page through text by invoking a program on a temporary file.", "args": ["text", "cmd"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.replace": {"doc": "Do a series of global replacements on a string.", "args": ["text"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.rfind": {"doc": "rfind(s, sub [,start [,end]]) -> int\n\n    Return the highest index in s where substring sub is found,\n    such that sub is contained within s[start,end].  Optional\n    arguments start and end are interpreted as in slice notation.\n\n    Return -1 on failure.\n\n    ", "args": ["s"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.Scanner": {"loc": "sample-input/pydoc.py", "namespace": "pydoc", "methods": [{"next": {"doc": "", "args": [], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"__init__": {"doc": "", "args": ["roots", "children", "descendp"], "type": "Method", "loc": "sample-input/pydoc.py"}}], "type": "Class"}, "pydoc.Repr": {"loc": "sample-input/pydoc.py", "namespace": "pydoc", "methods": [{"__init__": {"doc": "", "args": [], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"repr_tuple": {"doc": "", "args": ["x", "level"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"repr_dict": {"doc": "", "args": ["x", "level"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"_repr_iterable": {"doc": "", "args": ["x", "level", "left", "right", "maxiter", "trail"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"repr1": {"doc": "", "args": ["x", "level"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"repr": {"doc": "", "args": ["x"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"repr_long": {"doc": "", "args": ["x", "level"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"repr_str": {"doc": "", "args": ["x", "level"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"repr_set": {"doc": "", "args": ["x", "level"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"repr_instance": {"doc": "", "args": ["x", "level"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"repr_deque": {"doc": "", "args": ["x", "level"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"repr_list": {"doc": "", "args": ["x", "level"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"repr_array": {"doc": "", "args": ["x", "level"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"repr_frozenset": {"doc": "", "args": ["x", "level"], "type": "Method", "loc": "sample-input/pydoc.py"}}], "type": "Class"}, "pydoc.extract_tb": {"doc": "Return list of up to limit pre-processed entries from traceback.\n\n    This is useful for alternate formatting of stack traces.  If\n    'limit' is omitted or None, all entries are extracted.  A\n    pre-processed stack trace entry is a quadruple (filename, line\n    number, function name, text) representing the information that is\n    usually printed for a stack trace.  The text is a string with\n    leading and trailing whitespace stripped; if the source is not\n    available it is None.\n    ", "args": ["tb", "limit"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.join": {"doc": "join(list [,sep]) -> string\n\n    Return a string composed of the words in list, with\n    intervening occurrences of sep.  The default separator is a\n    single space.\n\n    (joinfields and join are synonymous)\n\n    ", "args": ["words", "sep"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.ErrorDuringImport": {"loc": "sample-input/pydoc.py", "namespace": "pydoc", "methods": [{"__str__": {"doc": "", "args": [], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"__init__": {"doc": "", "args": ["filename", "exc_info"], "type": "Method", "loc": "sample-input/pydoc.py"}}], "type": "Class"}, "pydoc.cli": {"doc": "Command-line interface (looks at sys.argv to decide what to do).", "args": [], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc._split_list": {"doc": "Split sequence s via predicate, and return pair ([true], [false]).\n\n    The return value is a 2-tuple of lists,\n        ([x for x in s if predicate(x)],\n         [x for x in s if not predicate(x)])\n    ", "args": ["s", "predicate"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.gui": {"doc": "Graphical interface (starts web server and pops up a control window).", "args": [], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.classify_class_attrs": {"doc": "Wrap inspect.classify_class_attrs, with fixup for data descriptors.", "args": ["object"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.locate": {"doc": "Locate an object by name or dotted path, importing as necessary.", "args": ["path", "forceload"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.plainpager": {"doc": "Simply print unformatted text.  This is the ultimate fallback.", "args": ["text"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.serve": {"doc": "", "args": ["port", "callback", "completer"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.source_synopsis": {"doc": "", "args": ["file"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.pager": {"doc": "The first time this is called, determine what kind of pager to use.", "args": ["text"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.strip": {"doc": "strip(s [,chars]) -> string\n\n    Return a copy of the string s with leading and trailing\n    whitespace removed.\n    If chars is given and not None, remove characters in chars instead.\n    If chars is unicode, S will be converted to unicode before stripping.\n\n    ", "args": ["s", "chars"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.apropos": {"doc": "Print all the one-line module summaries that contain a substring.", "args": ["key"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.ttypager": {"doc": "Page through text on a text terminal.", "args": ["text"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc._binstr": {"doc": "", "args": ["obj"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.pathdirs": {"doc": "Convert sys.path into a list of absolute, existing, unique paths.", "args": [], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.split": {"doc": "split(s [,sep [,maxsplit]]) -> list of strings\n\n    Return a list of the words in the string s, using sep as the\n    delimiter string.  If maxsplit is given, splits at no more than\n    maxsplit places (resulting in at most maxsplit+1 words).  If sep\n    is not specified or is None, any whitespace string is a separator.\n\n    (split and splitfields are synonymous)\n\n    ", "args": ["s", "sep", "maxsplit"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.plain": {"doc": "Remove boldface formatting from text.", "args": ["text"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc._is_some_method": {"doc": "", "args": ["obj"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.Doc": {"loc": "sample-input/pydoc.py", "namespace": "pydoc", "methods": [{"fail": {"doc": "Raise an exception for unimplemented types.", "args": ["object", "name"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"document": {"doc": "Generate documentation for an object.", "args": ["object", "name"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"getdocloc": {"doc": "Return the location of module docs or None", "args": ["object", "basedir"], "type": "Method", "loc": "sample-input/pydoc.py"}}], "type": "Class"}, "pydoc.splitdoc": {"doc": "Split a doc string into a synopsis line (if any) and the rest.", "args": ["doc"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.ModuleScanner": {"loc": "sample-input/pydoc.py", "namespace": "pydoc", "methods": [{"run": {"doc": "", "args": ["callback", "key", "completer", "onerror"], "type": "Method", "loc": "sample-input/pydoc.py"}}], "type": "Class"}, "pydoc.visiblename": {"doc": "Decide whether to show documentation on a variable.", "args": ["name", "all", "obj"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.ispackage": {"doc": "Guess whether a path refers to a package directory.", "args": ["path"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.stripid": {"doc": "Remove the hexadecimal id from a Python object representation.", "args": ["text"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.Helper": {"loc": "sample-input/pydoc.py", "namespace": "pydoc", "methods": [{"showtopic": {"doc": "", "args": ["topic", "more_xrefs"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"getline": {"doc": "Read one line, using raw_input when available.", "args": ["prompt"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"__repr__": {"doc": "", "args": [], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"listkeywords": {"doc": "", "args": [], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"intro": {"doc": "", "args": [], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"showsymbol": {"doc": "", "args": ["symbol"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"list": {"doc": "", "args": ["items", "columns", "width"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"__init__": {"doc": "", "args": ["input", "output"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"help": {"doc": "", "args": ["request"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"__call__": {"doc": "", "args": ["request"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"listsymbols": {"doc": "", "args": [], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"listmodules": {"doc": "", "args": ["key"], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"listtopics": {"doc": "", "args": [], "type": "Method", "loc": "sample-input/pydoc.py"}}, {"interact": {"doc": "", "args": [], "type": "Method", "loc": "sample-input/pydoc.py"}}], "type": "Class"}, "pydoc.cram": {"doc": "Omit part of a string if needed to make it fit in a maximum length.", "args": ["text", "maxlen"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.doc": {"doc": "Display text documentation, given an object or a path to an object.", "args": ["thing", "title", "forceload"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.allmethods": {"doc": "", "args": ["cl"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.isdata": {"doc": "Check if an object is of a type that probably means it's data.", "args": ["object"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}, "pydoc.ispath": {"doc": "", "args": ["x"], "type": "Function", "namespace": "pydoc", "loc": "sample-input/pydoc.py"}}
+{
+  "pydoc.safeimport": {
+    "doc": "Import a module; handle errors; return None if the module isn't found.\n\n    If the module *is* found but an exception occurs, it's wrapped in an\n    ErrorDuringImport exception and reraised.  Unlike __import__, if a\n    package path is specified, the module at the end of the path is returned,\n    not the package at the beginning.  If the optional 'forceload' argument\n    is 1, we reload the module from disk (unless it's a dynamic extension).",
+    "args": [
+      "path",
+      "forceload",
+      "cache"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.TextDoc": {
+    "doc": "Formatter class for text documentation.",
+    "type": "Class",
+    "namespace": "pydoc",
+    "methods": [
+      {
+        "docproperty": {
+          "doc": "Produce text documentation for a property.",
+          "args": [
+            "object",
+            "name",
+            "mod",
+            "cl"
+          ],
+          "namespace": "pydoc.TextDoc"
+        },
+        "indent": {
+          "doc": "Indent text by prepending a given prefix to each line.",
+          "args": [
+            "text",
+            "prefix"
+          ],
+          "namespace": "pydoc.TextDoc"
+        },
+        "bold": {
+          "doc": "Format a string in bold by overstriking.",
+          "args": [
+            "text"
+          ],
+          "namespace": "pydoc.TextDoc"
+        },
+        "_docdescriptor": {
+          "doc": "",
+          "args": [
+            "name",
+            "value",
+            "mod"
+          ],
+          "namespace": "pydoc.TextDoc"
+        },
+        "docmodule": {
+          "doc": "Produce text documentation for a given module object.",
+          "args": [
+            "object",
+            "name",
+            "mod"
+          ],
+          "namespace": "pydoc.TextDoc"
+        },
+        "section": {
+          "doc": "Format a section with a given heading.",
+          "args": [
+            "title",
+            "contents"
+          ],
+          "namespace": "pydoc.TextDoc"
+        },
+        "formatvalue": {
+          "doc": "Format an argument default value as text.",
+          "args": [
+            "object"
+          ],
+          "namespace": "pydoc.TextDoc"
+        },
+        "docother": {
+          "doc": "Produce text documentation for a data object.",
+          "args": [
+            "object",
+            "name",
+            "mod",
+            "parent",
+            "maxlen",
+            "doc"
+          ],
+          "namespace": "pydoc.TextDoc"
+        },
+        "repr": {
+          "doc": "",
+          "args": [
+            "x"
+          ],
+          "namespace": "pydoc.TextDoc"
+        },
+        "docdata": {
+          "doc": "Produce text documentation for a data descriptor.",
+          "args": [
+            "object",
+            "name",
+            "mod",
+            "cl"
+          ],
+          "namespace": "pydoc.TextDoc"
+        },
+        "docclass": {
+          "doc": "Produce text documentation for a given class object.",
+          "args": [
+            "object",
+            "name",
+            "mod"
+          ],
+          "namespace": "pydoc.TextDoc"
+        },
+        "docroutine": {
+          "doc": "Produce text documentation for a function or method object.",
+          "args": [
+            "object",
+            "name",
+            "mod",
+            "cl"
+          ],
+          "namespace": "pydoc.TextDoc"
+        },
+        "formattree": {
+          "doc": "Render in text a class tree as returned by inspect.getclasstree().",
+          "args": [
+            "tree",
+            "modname",
+            "parent",
+            "prefix"
+          ],
+          "namespace": "pydoc.TextDoc"
+        }
+      }
+    ],
+    "loc": "pydoc.py"
+  },
+  "pydoc.rstrip": {
+    "doc": "rstrip(s [,chars]) -> string\n\n    Return a copy of the string s with trailing whitespace removed.\n    If chars is given and not None, remove characters in chars instead.\n\n    ",
+    "args": [
+      "s",
+      "chars"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.extract_tb": {
+    "doc": "Return list of up to limit pre-processed entries from traceback.\n\n    This is useful for alternate formatting of stack traces.  If\n    'limit' is omitted or None, all entries are extracted.  A\n    pre-processed stack trace entry is a quadruple (filename, line\n    number, function name, text) representing the information that is\n    usually printed for a stack trace.  The text is a string with\n    leading and trailing whitespace stripped; if the source is not\n    available it is None.\n    ",
+    "args": [
+      "tb",
+      "limit"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.find": {
+    "doc": "find(s, sub [,start [,end]]) -> in\n\n    Return the lowest index in s where substring sub is found,\n    such that sub is contained within s[start,end].  Optional\n    arguments start and end are interpreted as in slice notation.\n\n    Return -1 on failure.\n\n    ",
+    "args": [
+      "s"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.join": {
+    "doc": "join(list [,sep]) -> string\n\n    Return a string composed of the words in list, with\n    intervening occurrences of sep.  The default separator is a\n    single space.\n\n    (joinfields and join are synonymous)\n\n    ",
+    "args": [
+      "words",
+      "sep"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.classname": {
+    "doc": "Get a class name and qualify it with a module name if necessary.",
+    "args": [
+      "object",
+      "modname"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.instance": {
+    "doc": "instance(class[, dict])\n\nCreate an instance without calling its __init__() method.\nThe class must be a classic class.\nIf present, dict must be a dictionary or None.",
+    "type": "Class",
+    "namespace": "pydoc",
+    "methods": [
+      {}
+    ],
+    "loc": "pydoc.py"
+  },
+  "pydoc.serve": {
+    "doc": "",
+    "args": [
+      "port",
+      "callback",
+      "completer"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.ErrorDuringImport": {
+    "doc": "Errors that occurred while trying to import something to document it.",
+    "type": "Class",
+    "namespace": "pydoc",
+    "methods": [
+      {
+        "__str__": {
+          "doc": "",
+          "args": [],
+          "namespace": "pydoc.ErrorDuringImport"
+        },
+        "__init__": {
+          "doc": "",
+          "args": [
+            "filename",
+            "exc_info"
+          ],
+          "namespace": "pydoc.ErrorDuringImport"
+        }
+      }
+    ],
+    "loc": "pydoc.py"
+  },
+  "pydoc.TextRepr": {
+    "doc": "Class for safely making a text representation of a Python object.",
+    "type": "Class",
+    "namespace": "pydoc",
+    "methods": [
+      {
+        "repr_instance": {
+          "doc": "",
+          "args": [
+            "x",
+            "level"
+          ],
+          "namespace": "pydoc.TextRepr"
+        },
+        "repr_string": {
+          "doc": "",
+          "args": [
+            "x",
+            "level"
+          ],
+          "namespace": "pydoc.TextRepr"
+        },
+        "__init__": {
+          "doc": "",
+          "args": [],
+          "namespace": "pydoc.TextRepr"
+        },
+        "repr1": {
+          "doc": "",
+          "args": [
+            "x",
+            "level"
+          ],
+          "namespace": "pydoc.TextRepr"
+        }
+      }
+    ],
+    "loc": "pydoc.py"
+  },
+  "pydoc.cli": {
+    "doc": "Command-line interface (looks at sys.argv to decide what to do).",
+    "args": [],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc._split_list": {
+    "doc": "Split sequence s via predicate, and return pair ([true], [false]).\n\n    The return value is a 2-tuple of lists,\n        ([x for x in s if predicate(x)],\n         [x for x in s if not predicate(x)])\n    ",
+    "args": [
+      "s",
+      "predicate"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.pipepager": {
+    "doc": "Page through text by feeding it to another program.",
+    "args": [
+      "text",
+      "cmd"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.gui": {
+    "doc": "Graphical interface (starts web server and pops up a control window).",
+    "args": [],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.classify_class_attrs": {
+    "doc": "Wrap inspect.classify_class_attrs, with fixup for data descriptors.",
+    "args": [
+      "object"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.strip": {
+    "doc": "strip(s [,chars]) -> string\n\n    Return a copy of the string s with leading and trailing\n    whitespace removed.\n    If chars is given and not None, remove characters in chars instead.\n    If chars is unicode, S will be converted to unicode before stripping.\n\n    ",
+    "args": [
+      "s",
+      "chars"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.resolve": {
+    "doc": "Given an object or a path to an object, get the object and its name.",
+    "args": [
+      "thing",
+      "forceload"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.locate": {
+    "doc": "Locate an object by name or dotted path, importing as necessary.",
+    "args": [
+      "path",
+      "forceload"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.plainpager": {
+    "doc": "Simply print unformatted text.  This is the ultimate fallback.",
+    "args": [
+      "text"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.HTMLRepr": {
+    "doc": "Class for safely making an HTML representation of a Python object.",
+    "type": "Class",
+    "namespace": "pydoc",
+    "methods": [
+      {
+        "repr_instance": {
+          "doc": "",
+          "args": [
+            "x",
+            "level"
+          ],
+          "namespace": "pydoc.HTMLRepr"
+        },
+        "repr_string": {
+          "doc": "",
+          "args": [
+            "x",
+            "level"
+          ],
+          "namespace": "pydoc.HTMLRepr"
+        },
+        "repr": {
+          "doc": "",
+          "args": [
+            "object"
+          ],
+          "namespace": "pydoc.HTMLRepr"
+        },
+        "repr1": {
+          "doc": "",
+          "args": [
+            "x",
+            "level"
+          ],
+          "namespace": "pydoc.HTMLRepr"
+        },
+        "escape": {
+          "doc": "",
+          "args": [
+            "text"
+          ],
+          "namespace": "pydoc.HTMLRepr"
+        },
+        "__init__": {
+          "doc": "",
+          "args": [],
+          "namespace": "pydoc.HTMLRepr"
+        }
+      }
+    ],
+    "loc": "pydoc.py"
+  },
+  "pydoc.replace": {
+    "doc": "Do a series of global replacements on a string.",
+    "args": [
+      "text"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.source_synopsis": {
+    "doc": "",
+    "args": [
+      "file"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.visiblename": {
+    "doc": "Decide whether to show documentation on a variable.",
+    "args": [
+      "name",
+      "all",
+      "obj"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.pager": {
+    "doc": "The first time this is called, determine what kind of pager to use.",
+    "args": [
+      "text"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.getpager": {
+    "doc": "Decide what method to use for paging through text.",
+    "args": [],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.writedocs": {
+    "doc": "Write out HTML documentation for all modules in a directory tree.",
+    "args": [
+      "dir",
+      "pkgpath",
+      "done"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.apropos": {
+    "doc": "Print all the one-line module summaries that contain a substring.",
+    "args": [
+      "key"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.ttypager": {
+    "doc": "Page through text on a text terminal.",
+    "args": [
+      "text"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.synopsis": {
+    "doc": "Get the one-line summary out of a module file.",
+    "args": [
+      "filename",
+      "cache"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.unicode": {
+    "doc": "unicode(object='') -> unicode object\nunicode(string[, encoding[, errors]]) -> unicode object\n\nCreate a new Unicode object from the given encoded string.\nencoding defaults to the current default string encoding.\nerrors can be 'strict', 'replace' or 'ignore' and defaults to 'strict'.",
+    "type": "Class",
+    "namespace": "pydoc",
+    "methods": [
+      {}
+    ],
+    "loc": "pydoc.py"
+  },
+  "pydoc.expandtabs": {
+    "doc": "expandtabs(s [,tabsize]) -> string\n\n    Return a copy of the string s with all tab characters replaced\n    by the appropriate number of spaces, depending on the current\n    column, and the tabsize (default 8).\n\n    ",
+    "args": [
+      "s",
+      "tabsize"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc._binstr": {
+    "doc": "",
+    "args": [
+      "obj"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.pathdirs": {
+    "doc": "Convert sys.path into a list of absolute, existing, unique paths.",
+    "args": [],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.split": {
+    "doc": "split(s [,sep [,maxsplit]]) -> list of strings\n\n    Return a list of the words in the string s, using sep as the\n    delimiter string.  If maxsplit is given, splits at no more than\n    maxsplit places (resulting in at most maxsplit+1 words).  If sep\n    is not specified or is None, any whitespace string is a separator.\n\n    (split and splitfields are synonymous)\n\n    ",
+    "args": [
+      "s",
+      "sep",
+      "maxsplit"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.plain": {
+    "doc": "Remove boldface formatting from text.",
+    "args": [
+      "text"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.lower": {
+    "doc": "lower(s) -> string\n\n    Return a copy of the string s converted to lowercase.\n\n    ",
+    "args": [
+      "s"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc._is_some_method": {
+    "doc": "",
+    "args": [
+      "obj"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.HTMLDoc": {
+    "doc": "Formatter class for HTML documentation.",
+    "type": "Class",
+    "namespace": "pydoc",
+    "methods": [
+      {
+        "classlink": {
+          "doc": "Make a link for a class.",
+          "args": [
+            "object",
+            "modname"
+          ],
+          "namespace": "pydoc.HTMLDoc"
+        },
+        "preformat": {
+          "doc": "Format literal preformatted text.",
+          "args": [
+            "text"
+          ],
+          "namespace": "pydoc.HTMLDoc"
+        },
+        "docother": {
+          "doc": "Produce HTML documentation for a data object.",
+          "args": [
+            "object",
+            "name",
+            "mod"
+          ],
+          "namespace": "pydoc.HTMLDoc"
+        },
+        "formattree": {
+          "doc": "Produce HTML for a class tree as given by inspect.getclasstree().",
+          "args": [
+            "tree",
+            "modname",
+            "parent"
+          ],
+          "namespace": "pydoc.HTMLDoc"
+        },
+        "escape": {
+          "doc": "",
+          "args": [
+            "text"
+          ],
+          "namespace": "pydoc.HTMLDoc"
+        },
+        "docroutine": {
+          "doc": "Produce HTML documentation for a function or method object.",
+          "args": [
+            "object",
+            "name",
+            "mod",
+            "funcs",
+            "classes",
+            "methods",
+            "cl"
+          ],
+          "namespace": "pydoc.HTMLDoc"
+        },
+        "index": {
+          "doc": "Generate an HTML index for a directory of modules.",
+          "args": [
+            "dir",
+            "shadowed"
+          ],
+          "namespace": "pydoc.HTMLDoc"
+        },
+        "section": {
+          "doc": "Format a section with a heading.",
+          "args": [
+            "title",
+            "fgcol",
+            "bgcol",
+            "contents",
+            "width",
+            "prelude",
+            "marginalia",
+            "gap"
+          ],
+          "namespace": "pydoc.HTMLDoc"
+        },
+        "modulelink": {
+          "doc": "Make a link for a module.",
+          "args": [
+            "object"
+          ],
+          "namespace": "pydoc.HTMLDoc"
+        },
+        "docproperty": {
+          "doc": "Produce html documentation for a property.",
+          "args": [
+            "object",
+            "name",
+            "mod",
+            "cl"
+          ],
+          "namespace": "pydoc.HTMLDoc"
+        },
+        "formatvalue": {
+          "doc": "Format an argument default value as text.",
+          "args": [
+            "object"
+          ],
+          "namespace": "pydoc.HTMLDoc"
+        },
+        "namelink": {
+          "doc": "Make a link for an identifier, given name-to-URL mappings.",
+          "args": [
+            "name"
+          ],
+          "namespace": "pydoc.HTMLDoc"
+        },
+        "_docdescriptor": {
+          "doc": "",
+          "args": [
+            "name",
+            "value",
+            "mod"
+          ],
+          "namespace": "pydoc.HTMLDoc"
+        },
+        "docmodule": {
+          "doc": "Produce HTML documentation for a module object.",
+          "args": [
+            "object",
+            "name",
+            "mod"
+          ],
+          "namespace": "pydoc.HTMLDoc"
+        },
+        "repr": {
+          "doc": "",
+          "args": [
+            "object"
+          ],
+          "namespace": "pydoc.HTMLDoc"
+        },
+        "docdata": {
+          "doc": "Produce html documentation for a data descriptor.",
+          "args": [
+            "object",
+            "name",
+            "mod",
+            "cl"
+          ],
+          "namespace": "pydoc.HTMLDoc"
+        },
+        "modpkglink": {
+          "doc": "Make a link for a module or package to display in an index.",
+          "args": [
+            "data"
+          ],
+          "namespace": "pydoc.HTMLDoc"
+        },
+        "bigsection": {
+          "doc": "Format a section with a big heading.",
+          "args": [
+            "title"
+          ],
+          "namespace": "pydoc.HTMLDoc"
+        },
+        "markup": {
+          "doc": "Mark up some plain text, given a context of symbols to look for.\n        Each context dictionary maps object names to anchor names.",
+          "args": [
+            "text",
+            "escape",
+            "funcs",
+            "classes",
+            "methods"
+          ],
+          "namespace": "pydoc.HTMLDoc"
+        },
+        "grey": {
+          "doc": "",
+          "args": [
+            "text"
+          ],
+          "namespace": "pydoc.HTMLDoc"
+        },
+        "heading": {
+          "doc": "Format a page heading.",
+          "args": [
+            "title",
+            "fgcol",
+            "bgcol",
+            "extras"
+          ],
+          "namespace": "pydoc.HTMLDoc"
+        },
+        "docclass": {
+          "doc": "Produce HTML documentation for a class object.",
+          "args": [
+            "object",
+            "name",
+            "mod",
+            "funcs",
+            "classes"
+          ],
+          "namespace": "pydoc.HTMLDoc"
+        },
+        "multicolumn": {
+          "doc": "Format a list of items into a multi-column list.",
+          "args": [
+            "list",
+            "format",
+            "cols"
+          ],
+          "namespace": "pydoc.HTMLDoc"
+        },
+        "page": {
+          "doc": "Format an HTML page.",
+          "args": [
+            "title",
+            "contents"
+          ],
+          "namespace": "pydoc.HTMLDoc"
+        }
+      }
+    ],
+    "loc": "pydoc.py"
+  },
+  "pydoc.importfile": {
+    "doc": "Import a Python source file or compiled file given its path.",
+    "args": [
+      "path"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.Doc": {
+    "doc": null,
+    "type": "Class",
+    "namespace": "pydoc",
+    "methods": [
+      {
+        "fail": {
+          "doc": "Raise an exception for unimplemented types.",
+          "args": [
+            "object",
+            "name"
+          ],
+          "namespace": "pydoc.Doc"
+        },
+        "document": {
+          "doc": "Generate documentation for an object.",
+          "args": [
+            "object",
+            "name"
+          ],
+          "namespace": "pydoc.Doc"
+        },
+        "getdocloc": {
+          "doc": "Return the location of module docs or None",
+          "args": [
+            "object",
+            "basedir"
+          ],
+          "namespace": "pydoc.Doc"
+        }
+      }
+    ],
+    "loc": "pydoc.py"
+  },
+  "pydoc.splitdoc": {
+    "doc": "Split a doc string into a synopsis line (if any) and the rest.",
+    "args": [
+      "doc"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.ModuleScanner": {
+    "doc": "An interruptible scanner that searches module synopses.",
+    "type": "Class",
+    "namespace": "pydoc",
+    "methods": [
+      {
+        "run": {
+          "doc": "",
+          "args": [
+            "callback",
+            "key",
+            "completer",
+            "onerror"
+          ],
+          "namespace": "pydoc.ModuleScanner"
+        }
+      }
+    ],
+    "loc": "pydoc.py"
+  },
+  "pydoc.isdata": {
+    "doc": "Check if an object is of a type that probably means it's data.",
+    "args": [
+      "object"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.deque": {
+    "doc": "deque([iterable[, maxlen]]) --> deque object\n\nBuild an ordered collection with optimized access from its endpoints.",
+    "type": "Class",
+    "namespace": "pydoc",
+    "methods": [
+      {}
+    ],
+    "loc": "pydoc.py"
+  },
+  "pydoc.stripid": {
+    "doc": "Remove the hexadecimal id from a Python object representation.",
+    "args": [
+      "text"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.writedoc": {
+    "doc": "Write HTML documentation to a file in the current directory.",
+    "args": [
+      "thing",
+      "forceload"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.ispackage": {
+    "doc": "Guess whether a path refers to a package directory.",
+    "args": [
+      "path"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.getdoc": {
+    "doc": "Get the doc string or comments for an object.",
+    "args": [
+      "object"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.ispath": {
+    "doc": "",
+    "args": [
+      "x"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc._OldStyleClass": {
+    "doc": null,
+    "type": "Class",
+    "namespace": "pydoc",
+    "methods": [
+      {}
+    ],
+    "loc": "pydoc.py"
+  },
+  "pydoc.render_doc": {
+    "doc": "Render text documentation, given an object or a path to an object.",
+    "args": [
+      "thing",
+      "title",
+      "forceload"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc._encode": {
+    "doc": "",
+    "args": [
+      "text",
+      "encoding"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.Helper": {
+    "doc": null,
+    "type": "Class",
+    "namespace": "pydoc",
+    "methods": [
+      {
+        "__repr__": {
+          "doc": "",
+          "args": [],
+          "namespace": "pydoc.Helper"
+        },
+        "listkeywords": {
+          "doc": "",
+          "args": [],
+          "namespace": "pydoc.Helper"
+        },
+        "help": {
+          "doc": "",
+          "args": [
+            "request"
+          ],
+          "namespace": "pydoc.Helper"
+        },
+        "showtopic": {
+          "doc": "",
+          "args": [
+            "topic",
+            "more_xrefs"
+          ],
+          "namespace": "pydoc.Helper"
+        },
+        "interact": {
+          "doc": "",
+          "args": [],
+          "namespace": "pydoc.Helper"
+        },
+        "list": {
+          "doc": "",
+          "args": [
+            "items",
+            "columns",
+            "width"
+          ],
+          "namespace": "pydoc.Helper"
+        },
+        "listmodules": {
+          "doc": "",
+          "args": [
+            "key"
+          ],
+          "namespace": "pydoc.Helper"
+        },
+        "intro": {
+          "doc": "",
+          "args": [],
+          "namespace": "pydoc.Helper"
+        },
+        "listtopics": {
+          "doc": "",
+          "args": [],
+          "namespace": "pydoc.Helper"
+        },
+        "__call__": {
+          "doc": "",
+          "args": [
+            "request"
+          ],
+          "namespace": "pydoc.Helper"
+        },
+        "listsymbols": {
+          "doc": "",
+          "args": [],
+          "namespace": "pydoc.Helper"
+        },
+        "getline": {
+          "doc": "Read one line, using raw_input when available.",
+          "args": [
+            "prompt"
+          ],
+          "namespace": "pydoc.Helper"
+        },
+        "__init__": {
+          "doc": "",
+          "args": [
+            "input",
+            "output"
+          ],
+          "namespace": "pydoc.Helper"
+        },
+        "showsymbol": {
+          "doc": "",
+          "args": [
+            "symbol"
+          ],
+          "namespace": "pydoc.Helper"
+        }
+      }
+    ],
+    "loc": "pydoc.py"
+  },
+  "pydoc.cram": {
+    "doc": "Omit part of a string if needed to make it fit in a maximum length.",
+    "args": [
+      "text",
+      "maxlen"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.doc": {
+    "doc": "Display text documentation, given an object or a path to an object.",
+    "args": [
+      "thing",
+      "title",
+      "forceload"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.tempfilepager": {
+    "doc": "Page through text by invoking a program on a temporary file.",
+    "args": [
+      "text",
+      "cmd"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.allmethods": {
+    "doc": "",
+    "args": [
+      "cl"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.describe": {
+    "doc": "Produce a short description of the given thing.",
+    "args": [
+      "thing"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.rfind": {
+    "doc": "rfind(s, sub [,start [,end]]) -> int\n\n    Return the highest index in s where substring sub is found,\n    such that sub is contained within s[start,end].  Optional\n    arguments start and end are interpreted as in slice notation.\n\n    Return -1 on failure.\n\n    ",
+    "args": [
+      "s"
+    ],
+    "namespace": "pydoc",
+    "type": "Function"
+  },
+  "pydoc.Scanner": {
+    "doc": "A generic tree iterator.",
+    "type": "Class",
+    "namespace": "pydoc",
+    "methods": [
+      {
+        "__init__": {
+          "doc": "",
+          "args": [
+            "roots",
+            "children",
+            "descendp"
+          ],
+          "namespace": "pydoc.Scanner"
+        },
+        "next": {
+          "doc": "",
+          "args": [],
+          "namespace": "pydoc.Scanner"
+        }
+      }
+    ],
+    "loc": "pydoc.py"
+  },
+  "pydoc.Repr": {
+    "doc": null,
+    "type": "Class",
+    "namespace": "pydoc",
+    "methods": [
+      {
+        "repr_instance": {
+          "doc": "",
+          "args": [
+            "x",
+            "level"
+          ],
+          "namespace": "pydoc.Repr"
+        },
+        "repr_array": {
+          "doc": "",
+          "args": [
+            "x",
+            "level"
+          ],
+          "namespace": "pydoc.Repr"
+        },
+        "repr_frozenset": {
+          "doc": "",
+          "args": [
+            "x",
+            "level"
+          ],
+          "namespace": "pydoc.Repr"
+        },
+        "repr_tuple": {
+          "doc": "",
+          "args": [
+            "x",
+            "level"
+          ],
+          "namespace": "pydoc.Repr"
+        },
+        "repr_list": {
+          "doc": "",
+          "args": [
+            "x",
+            "level"
+          ],
+          "namespace": "pydoc.Repr"
+        },
+        "repr_long": {
+          "doc": "",
+          "args": [
+            "x",
+            "level"
+          ],
+          "namespace": "pydoc.Repr"
+        },
+        "_repr_iterable": {
+          "doc": "",
+          "args": [
+            "x",
+            "level",
+            "left",
+            "right",
+            "maxiter",
+            "trail"
+          ],
+          "namespace": "pydoc.Repr"
+        },
+        "repr": {
+          "doc": "",
+          "args": [
+            "x"
+          ],
+          "namespace": "pydoc.Repr"
+        },
+        "repr_set": {
+          "doc": "",
+          "args": [
+            "x",
+            "level"
+          ],
+          "namespace": "pydoc.Repr"
+        },
+        "repr_str": {
+          "doc": "",
+          "args": [
+            "x",
+            "level"
+          ],
+          "namespace": "pydoc.Repr"
+        },
+        "repr_deque": {
+          "doc": "",
+          "args": [
+            "x",
+            "level"
+          ],
+          "namespace": "pydoc.Repr"
+        },
+        "repr1": {
+          "doc": "",
+          "args": [
+            "x",
+            "level"
+          ],
+          "namespace": "pydoc.Repr"
+        },
+        "repr_dict": {
+          "doc": "",
+          "args": [
+            "x",
+            "level"
+          ],
+          "namespace": "pydoc.Repr"
+        },
+        "__init__": {
+          "doc": "",
+          "args": [],
+          "namespace": "pydoc.Repr"
+        }
+      }
+    ],
+    "loc": "pydoc.py"
+  }
+}
